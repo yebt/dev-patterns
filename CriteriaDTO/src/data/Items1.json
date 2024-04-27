@@ -1,0 +1,83 @@
+[
+    {
+      "id": "1",
+      "name": "Product A",
+      "prime": true,
+      "new": false,
+      "price": 20,
+      "currency": "USD"
+    },
+    {
+      "id": "2",
+      "name": "Product B",
+      "prime": false,
+      "new": true,
+      "price": 15,
+      "currency": "EUR"
+    },
+    {
+      "id": "3",
+      "name": "Product C",
+      "prime": true,
+      "new": false,
+      "price": 25,
+      "currency": "USD"
+    },
+    {
+      "id": "4",
+      "name": "Product D",
+      "prime": false,
+      "new": true,
+      "price": 30,
+      "currency": "GBP"
+    },
+    {
+      "id": "5",
+      "name": "Product E",
+      "prime": true,
+      "new": false,
+      "price": 18,
+      "currency": "USD"
+    },
+    {
+      "id": "6",
+      "name": "Product F",
+      "prime": false,
+      "new": true,
+      "price": 22,
+      "currency": "EUR"
+    },
+    {
+      "id": "7",
+      "name": "Product G",
+      "prime": true,
+      "new": false,
+      "price": 28,
+      "currency": "USD"
+    },
+    {
+      "id": "8",
+      "name": "Product H",
+      "prime": false,
+      "new": true,
+      "price": 35,
+      "currency": "GBP"
+    },
+    {
+      "id": "9",
+      "name": "Product I",
+      "prime": true,
+      "new": false,
+      "price": 17,
+      "currency": "USD"
+    },
+    {
+      "id": "10",
+      "name": "Product J",
+      "prime": false,
+      "new": true,
+      "price": 21,
+      "currency": "EUR"
+    }
+  ]
+  
