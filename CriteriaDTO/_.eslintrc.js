@@ -1,14 +1,10 @@
-export default {
+module.exports = {
   env: {
     es2021: true,
     node: true,
   },
   extends: "love",
   overrides: [
-    {
-      files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      extends: "love",
-    },
     {
       env: {
         node: true,
