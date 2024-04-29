@@ -6,7 +6,9 @@ export class SearchParamsCriteriaFiltersParser {
     return Criteria.fromPrimitives(
       SearchParamsCriteriaFiltersParser.parse(searchParams),
       searchParams.get('orderBy'),
-      searchParams.get('orderType')
+      searchParams.get('orderType'),
+      Number(searchParams.get('pageSize')),
+      Number(searchParams.get('pageNumber'))
     )
   }
 
@@ -18,6 +20,16 @@ export class SearchParamsCriteriaFiltersParser {
       if (match != null) {
         const index = match[1]
         const property = match[2] as keyof FiltersPrimitives
+
+        if (
+          index === 'orderBy' ||
+          index === 'orderType' ||
+          index === 'pageSize' ||
+          index === 'pageNumber'
+        ) {
+          return
+        }
+
         if (tempFilters[index] === undefined && tempFilters[index] === null) {
           tempFilters[index] = {}
         }
@@ -26,7 +38,10 @@ export class SearchParamsCriteriaFiltersParser {
     })
 
     return Object.values(tempFilters).filter(
-      (filter) => filter.field !== undefined && filter.operator !== undefined && filter.value !== undefined
+      (filter) =>
+        filter.field !== undefined &&
+        filter.operator !== undefined &&
+        filter.value !== undefined
     ) as FiltersPrimitives[]
   }
 }

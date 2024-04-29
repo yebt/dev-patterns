@@ -5,17 +5,29 @@ export enum Operator {
   LT = '<',
   GTE = '>=',
   LTE = '<=',
-  LIKE = 'like',
-  ILIKE = 'ilike',
-  IN = 'in',
-  NOTIN = 'not in',
-  ISNULL = 'is null',
-  CONTAINS = 'contains',
-  NOTCONTAINS = 'not contains',
+  LIKE = 'LIKE',
+  ILIKE = 'ILIKE',
+  IN = 'IN',
+  NOTIN = 'NOT_IN',
+  ISNULL = 'IS_NULL',
+  CONTAINS = 'CONTAINS',
+  NOT_CONTAINS = 'NOT_CONTAINS',
 }
 
 export class FilterOperator {
   constructor (public readonly value: Operator) {}
+
+  isContains (): boolean {
+    return this.value.valueOf() === Operator.CONTAINS.valueOf()
+  }
+
+  isNotContains (): boolean {
+    return this.value.valueOf() === Operator.NOT_CONTAINS.valueOf()
+  }
+
+  isNotEqual (): boolean {
+    return this.value.valueOf() === Operator.NE.valueOf()
+  }
 }
 
 export class FilterField {
